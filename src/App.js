@@ -39,8 +39,8 @@ class App extends React.Component {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Gender</th>
-                <th>Email</th>
-                <th>Phone Number</th>
+                <th>Payment Method</th>
+                <th>Credit Card Type</th>
               </tr>
             </thead>
             <tbody>
@@ -50,8 +50,8 @@ class App extends React.Component {
                     <td>{profile.FirstName}</td>
                     <td>{profile.LastName}</td>
                     <td>{profile.Gender}</td>
-                    <td>{profile.Email}</td>
-                    <td>{profile.PhoneNumber}</td>
+                    <td>{profile.PaymentMethod}</td>
+                    <td>{profile.CreditCardType}</td>
                   </tr>
                 );
               })}
