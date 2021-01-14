@@ -33,30 +33,35 @@ class App extends React.Component {
     return (
       <div>
         <ReactBootStrap.Container>
-        <ReactBootStrap.Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Gender</th>
-                <th>Payment Method</th>
-                <th>Credit Card Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              {profiles.map((profile) => {
-                return(
-                  <tr key={profile.userName}>
-                    <td>{profile.FirstName}</td>
-                    <td>{profile.LastName}</td>
-                    <td>{profile.Gender}</td>
-                    <td>{profile.PaymentMethod}</td>
-                    <td>{profile.CreditCardType}</td>
+          <ReactBootStrap.Card>
+            <ReactBootStrap.Card.Body>
+              <ReactBootStrap.Card.Title><strong>Profile List</strong></ReactBootStrap.Card.Title>
+              <ReactBootStrap.Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Payment Method</th>
+                    <th>Credit Card Type</th>
                   </tr>
-                );
-              })}
-            </tbody>
-          </ReactBootStrap.Table>
+                </thead>
+                <tbody>
+                  {profiles.map((profile) => {
+                    return(
+                      <tr key={profile.userName}>
+                        <td>{profile.FirstName}</td>
+                        <td>{profile.LastName}</td>
+                        <td>{profile.Gender}</td>
+                        <td>{profile.PaymentMethod}</td>
+                        <td>{profile.CreditCardType}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </ReactBootStrap.Table>
+            </ReactBootStrap.Card.Body>
+          </ReactBootStrap.Card>
         </ReactBootStrap.Container>
       </div>
     );
